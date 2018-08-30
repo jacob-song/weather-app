@@ -7,25 +7,29 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <header>
+            <h1>Title of the Web application</h1>
+        </header>
         <div class="page">
-            <div class="topbar">
-                <h1>This is the top bar</h1>
+            <div class="weather-image"> 
+                <p> image here </p>
             </div>
-            
 
-            <div class="location">
-                <p>will display current location (City, State/Country)</p>
-            </div>
-            <div class="weather-icon">
-                <p>This is where the corresponding image will go</p>
-            </div>
             <div class="weather-info">
-                <div class="local-time">Local Time</div>
-                <div class="temperature">Current Temperature</div>
-                <div class="weather-condition">Current Weather Condition</div>
+                <div class="section local-time">Local Time</div>
+                <div class="section temperature">Current Temperature</div>
+                <div class="section weather-condition">Current Weather Condition</div>
             </div>
+
+            <div class="form">
+                <label for="city-name">City Name</label>
+                <input id="city-name" type='text' placeholder="College Park, MD" required/>
+            </div>
+                
+            <div class="button">Get Weather</div>
+
             <div class="footer">
-                <p>created by Jacob Song and other information</p>
+                <p>footer</p>
             </div>
         </div>
     </body>
