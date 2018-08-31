@@ -20,15 +20,3 @@ h1 {
     margin: 0 auto;
     border: 1px solid red;
 }
-
-.button {
-    color: #fff;
-    background-color: red;
-    padding: 10px;
-    text-align: center;
-    border: 2px solid #5D6063;   
-    border-radius: 4px;
-  
-    width: 200px;
-    margin: 20px auto;
-  }

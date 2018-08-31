@@ -6,21 +6,25 @@
         <title>Simple Weather Application</title>
         <link rel="stylesheet" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://darkskyapp.github.io/skycons/skycons.js"></script>
     <body>
         <header>
-            <h1>Weather Application</h1>
+            <h2>Local Weather Application</h2>
         </header>
+        
         <div class="page">
-            <div class="weather-image"> 
-                <p> image here </p>
-            </div>
+            <article>
+            <canvas id="skycon" width="128" height="128"></canvas>
 
-            <div class="weather-info">
+            <section class="weather-info">
                 <h3><div id="location"></div></h3>
                 <h3><div id="local-time"></div></h3>
                 <h3><div id="temperature"></div></h3>
                 <h3><div id="weather-condition"></div></h3>
-            </div>
+            </section>
+
+
+            </article>
         </div>
     </body>
 
