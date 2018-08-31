@@ -1,0 +1,21 @@
+<div class="form">
+                <!-- <label for="city name">City Name</label> -->
+                <input id="search" type="text" size="30" placeholder="College Park, MD" required/>
+            </div>
+                
+            <div class="button">Get Weather</div>
+
+            <footer>footer</footer>
+
+            <!-- script for places search -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW-ctNylEQjbdT0ZL8tVm6KM8nSwL1m-0&libraries=places" type="text/javascript"></script>
+
+            <script>
+                var searchBox = new google.maps.places.SearchBox(document.getElementById('search'));
+
+                google.maps.event.addListener(searchBox, 'places_changed', function() {
+                    var locale = searchBox.getPlaces()[0];
+
+                })
+
+            </script>

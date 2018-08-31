@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simple Weather Application</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <body>
         <header>
             <h1>Weather Application</h1>
@@ -15,19 +16,14 @@
             </div>
 
             <div class="weather-info">
-                <div class="section local-time">Local Time</div>
-                <div class="section temperature">Current Temperature</div>
-                <div class="section weather-condition">Current Weather Condition</div>
+                <h3><div id="location"></div></h3>
+                <!-- <h3><div id="local-time"></div></h3> -->
+                <h3><div id="temperature"></div></h3>
+                <h3><div id="weather-condition"></div></h3>
             </div>
-
-            <div class="form">
-                <label for="city-name">City Name</label>
-                <input id="city-name" type='text' placeholder="College Park, MD" required/>
-            </div>
-                
-            <div class="button">Get Weather</div>
-
-            <footer>footer</footer>
         </div>
     </body>
+
+    <script type='text/javascript' src='config.js'></script>
+    <script type='text/javascript' src="app.js"></script>
 </html>
