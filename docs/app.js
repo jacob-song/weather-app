@@ -1,8 +1,12 @@
 $(document).ready(function() {
     //latitude and longitude
-    var lat, long;
+    var lat, long, location;
     var apiKey = config.MY_DARK_KEY;
-    //var location = document.getElementById("location");
+    var skycons = new Skycons({"color": "#ffffff"});
+
+    // I think this slows it down too much??
+    skycons.add(document.getElementById("skycon"), Skycons.PARTLY_CLOUDY_DAY);
+    skycons.play();
 
     //HTML5 geolocation
     navigator.geolocation.getCurrentPosition(getCoordinates, error);
@@ -16,15 +20,14 @@ $(document).ready(function() {
     }
 
     function error() {
-        location.innerHTML = "Unable to retrieve your location";
+        document.getElementById("location").innerHTML = "Unable to retrieve your location!";
+        // skycons.pause();
+        return;
     }
     
     //Retrieves address components with latitude and longitude using google's api
     function getCityName(lat, long){
-        var cityName;
-        var areaName;
-        var countryCode;
-        var countryName;
+        var cityName, areaName, countryCode, countryName;
         var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+ lat + "," + long;
 
         $.getJSON(url, function(data) {
@@ -43,27 +46,28 @@ $(document).ready(function() {
             });
 
             if (countryCode === "US") {
-                $("#location").text(cityName + ", " + areaName);
+                location = cityName + ", " + areaName;
             } else {
-                $("#location").text(cityName + ", " + countryName);
+                location = cityName + ", " + countryName;
             }
                
         });
       }
 
       //Retrieves current weather information using dark sky api
-      function getWeatherInfo(lat, long) {
+    function getWeatherInfo(lat, long) {
+        var temperature;
         var url = "https://api.forecast.io/forecast/" + apiKey + "/" + lat + "," + long + "?callback=?";
 
         $.getJSON(url, function(data) {
-            //skycons();
-            var skycons = new Skycons({"color": "#000000"});
-            $("#temperature").html(data.currently.temperature + "° F");
-            $("#weather-condition").html(data.currently.summary);
             skycons.add(document.getElementById("skycon"), data.currently.icon);
             skycons.play();
+            temperature = Math.round(data.currently.temperature * 10) / 10;
+            $("#location").text(location);
+            $("#temperature").html(temperature + "° F");
+            $("#weather-condition").html(data.currently.summary);
             // $("#image").append("<canvas class=" + data.currently.icon + "width='64' height='64'></canvas>");
-            
+            handleBackground();
         });
-      }
+        }
 });
