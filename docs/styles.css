@@ -29,7 +29,7 @@ body {
 	height: 90vh;
     color: var(--color-one);
     
-/* CSS gradient animation code courtesy of Manuel Pinto*/
+/* pure CSS gradient animation code */
 	background: linear-gradient(45deg, var(--color-one), var(--color-two));
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 25s ease infinite;
@@ -64,6 +64,18 @@ footer {
 	color: #ffffff;
 	text-align: center;
 }
+
+a:hover,
+a:visited:hover {
+	color: aqua;
+  }
+
+a:active,
+a:visited:active  {
+	color: purple;
+}
+
+
 
 @-webkit-keyframes Gradient {
 	0% {
