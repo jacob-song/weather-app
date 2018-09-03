@@ -26,6 +26,7 @@ The background of the website is an animated gradient using CSS. Colors are rela
 ### TO-DOs:
 (Hopefully work on them when I feel like it): 
 * ~~Make web application media responsive~~
+* Fix weather details not showing up on mobile
 * Request Dark Sky API weather data via Proxy API Server instead
 * Add local time to weather description
 * Use Google Maps Geocoding API to integrate a search bar to see weather in other locations
