@@ -19,3 +19,16 @@
                 })
 
             </script>
+
+SKYCONS {
+    CLEAR_DAY #87bbff; #ffc949;
+    CLEAR_NIGHT #3d3f4f; #091047;
+    PARTLY_CLOUDY_DAY #87bbff; #C9CACA;
+    PARTLY_CLOUDY_NIGHT #7F706C; #091047;
+    CLOUDY #C9CACA; #b3cdef;
+    RAIN #3C424C; #395877;
+    SLEET #B8B8B8; #EDEFF3;
+    SNOW #B8B8B8; #EDEFF3;
+    WIND
+    FOG #D3D2D3; #a5a5a5;
+}

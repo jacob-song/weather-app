@@ -1,7 +1,21 @@
 :root {
     /* default color?*/
-    --color-one: #EE7752;
-    --color-two: #E73C7E;
+    --color-one: #4ed3d3;
+	--color-two: #d8e9ff;
+}
+
+color palette {
+    color: #87bbff; /*day*/
+	color: #121735; /*night*/ 
+	
+	color: #ffc949; /*sunny*/
+	color: #3C424C; /*rain*/
+	color: #EDEFF3; /*snow*/
+	color: #B8B8B8; /*sleet*/
+	color: #D3D2D3; /*fog*/
+	color: #C9CACA; /*cloudy*/
+	color: #E8F3F7; /*partly cloudy day*/
+	color: #7F706C; /*partly cloudy night*/
 }
 
 * {
@@ -17,7 +31,7 @@ header {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Source Sans Pro", "Roboto", sans-serif;
 	width: 100wh;
 	height: 90vh;
     color: var(--color-one);
@@ -25,9 +39,9 @@ body {
 /* CSS gradient animation code courtesy of Manuel Pinto*/
 	background: linear-gradient(45deg, var(--color-one, red), var(--color-two, blue));
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+	-webkit-animation: Gradient 25s ease infinite;
+	-moz-animation: Gradient 25s ease infinite;
+	animation: Gradient 25s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
@@ -68,7 +82,7 @@ body {
 
 .page {
     text-align: center;
-    border: 1px solid #000000; /* just to see */
+    /* border: 1px solid #000000; just to see */
     margin: auto;
     width: 50%;
     height: 400px;
@@ -78,7 +92,7 @@ body {
 
 h1, h2 {
     color: #ffffff;
-    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    /* text-shadow: -1px 0 #333333, 0 1px #333333, 1px 0 #333333, 0 -1px #333333; */
 }
 
 

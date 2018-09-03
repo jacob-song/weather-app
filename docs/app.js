@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //latitude and longitude
-    var lat, long, location;
+    var lat, long, location, icon;
     var apiKey = config.MY_DARK_KEY;
     var skycons = new Skycons({"color": "#ffffff"});
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     function error() {
         document.getElementById("location").innerHTML = "Unable to retrieve your location!";
-        // skycons.pause();
+        skycons.pause();
         return;
     }
     
@@ -54,20 +54,29 @@ $(document).ready(function() {
         });
       }
 
-      //Retrieves current weather information using dark sky api
+    //Retrieves current weather information using dark sky api
     function getWeatherInfo(lat, long) {
         var temperature;
         var url = "https://api.forecast.io/forecast/" + apiKey + "/" + lat + "," + long + "?callback=?";
 
         $.getJSON(url, function(data) {
-            skycons.add(document.getElementById("skycon"), data.currently.icon);
+            icon = data.currently.icon;
+            console.log(icon);
+            skycons.set(document.getElementById("skycon"), icon);
             skycons.play();
             temperature = Math.round(data.currently.temperature * 10) / 10;
             $("#location").text(location);
-            $("#temperature").html(temperature + "° F");
+            $("#temperature").html(temperature + "° F, " + data.currently.precipProbability + ", " + data.currently.humidity + ", " + data.currently.windSpeed);
             $("#weather-condition").html(data.currently.summary);
             // $("#image").append("<canvas class=" + data.currently.icon + "width='64' height='64'></canvas>");
             handleBackground();
         });
+    }
+
+    function handleBackground() {
+        if (icon === "partly-cloudy-night") {
+            document.documentElement.style.setProperty('--color-one', '#ffffff');
+            document.documentElement.style.setProperty('--color-two', '#000000');
         }
+    }
 });
