@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    //latitude and longitude
+    // var apiKey = config.MY_DARK_KEY;
+    var apiKey = '4f6c57c2d0de4c3ec164834538671f6c';
     var lat, long, location, icon;
-    var apiKey = config.MY_DARK_KEY;
     var skycons = new Skycons({"color": "#ffffff"});
 
     // I think this slows it down too much??
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
         $.getJSON(url, function(data) {
             icon = data.currently.icon;
-            console.log(icon);
+            console.log(JSON.stringify(data));
             skycons.set(document.getElementById("skycon"), icon);
             skycons.play();
 
