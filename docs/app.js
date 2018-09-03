@@ -61,7 +61,7 @@ $(document).ready(function() {
 
         $.getJSON(url, function(data) {
             icon = data.currently.icon;
-            console.log(JSON.stringify(data));
+            // console.log(JSON.stringify(data));
             skycons.set(document.getElementById("skycon"), icon);
             skycons.play();
 
