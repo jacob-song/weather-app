@@ -15,7 +15,9 @@ Here's a preview:
 
 ## Description
 
-The web application has an input field that autocompletes locations via the Google Places API, and has two buttons that provide the users the choice to search up weather with either geolocation or by location search.
+This Weather Application designed and implemented by [me](https://github.com/jacob-song) displays weather information of your current geographical location or by searching any location via the search bar. 
+
+The web application has an input field that autocompletes locations via the Google Places API. It has two buttons which is used to choose between using the user's geographical location or any searched location. 
 
 With the user's permission, uses HTML5 [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) to display several weather informations from the user's geocraphical location. 
 
