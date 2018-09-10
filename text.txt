@@ -32,3 +32,10 @@ SKYCONS {
     WIND #4ed3d3; #d8e9ff;
     FOG #D3D2D3; #a5a5a5;
 }
+
+make buttons "repeatable" always on standby (while?)
+clear location form if using geolocation instead (change placeholder too)
+how to use form text to lat,long to use for location
+
+form styling and button styling
+add one more line space for box 

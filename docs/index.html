@@ -15,17 +15,27 @@
         <div class="box">
             <section class="weather-info"></section>
             <canvas id="skycon" width="192" height="192"></canvas>
-                <h1><div id="location"></div></h1>
-                <h1><div id="weather-condition"></div></h1>
-                <h2><div id="temperature"></div></h2>
-                <h2><div id="precip"></div></h2>
-                <h2><div id="humidity"></div></h2>
-                <h2><div id="wind"></div></h2>
+            
+            <div id="fields">
+                <div id="form">
+                    <input id="search" placeholder="Search for City" type="text"/>
+                </div>
+                <button id="button-one">Search</button>
+                <button id="button-two">Use My Location</button>
+            </div>
+
+            <h1><div id="location"></div></h1>
+            <h1><div id="weather-condition"></div></h1>
+            <h2><div id="temperature"></div></h2>
+            <h2><div id="precip"></div></h2>
+            <h2><div id="humidity"></div></h2>
+            <h2><div id="wind"></div></h2>
             </section>
         </div>
         <footer>Created by Jacob Song |  Powered by <a href="https://darksky.net/dev">Dark Sky</a> | <a href="https://github.com/jacob-song/weather-app">About</a></footer>
     </body>
 
     <!-- <script type='text/javascript' src='config.js'></script> -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW-ctNylEQjbdT0ZL8tVm6KM8nSwL1m-0&libraries=places"></script>
     <script type='text/javascript' src="app.js"></script>
 </html>
