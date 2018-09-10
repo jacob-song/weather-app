@@ -1,19 +1,19 @@
 # [weather-app](https://jacob-song.github.io/weather-app/)
 
-### Weather Application 
+## Weather Application 
 
 This project displays weather information using HTML5 [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation), [Dark Skys](https://darksky.net/dev/), [Skycons](https://darkskyapp.github.io/skycons/) and [Google Maps API](https://developers.google.com/maps/documentation/).
 
 Here's a preview:
 ![Preview](https://i.imgur.com/DZyTUIm.gif)
 
-### Technologies Used
+## Technologies Used
 * HTML & CSS
 * Dark Sky API
 * JavaScript/JQuery
 * Google Maps API
 
-### Description
+## Description
 
 The web application has an input field that autocompletes locations via the Google Places API, and has two buttons that provide the users the choice to search up weather with either geolocation or by location search.
 
@@ -28,7 +28,7 @@ The featured animated weather icons are called [Skycons](https://darkskyapp.gith
 
 The background of the website is an animated gradient using CSS. Colors are relative to the current weather condition and blends two relative color together to create a flowing gradient animation bouncing between the two.
 
-### TO-DOs:
+## TO-DOs:
 (Hopefully work on them when I feel like it): 
 * ~~Make web application media responsive~~
 * Fix weather details not showing up on mobile
